@@ -1,12 +1,12 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
-from PyQt6.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
+from PyQt5.QtCore import Qt
 
 class HelloWorldApp(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("PyQt6 Hello World")
+        self.setWindowTitle("PyQt5 Hello World")
         self.setMinimumSize(300, 100)
 
         # Create a central widget and a layout
@@ -16,7 +16,7 @@ class HelloWorldApp(QMainWindow):
 
         # Create a label with "Hello World"
         self.label = QLabel("Hello World", self)
-        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label.setAlignment(Qt.AlignCenter)
         
         # Add some basic styling
         self.label.setStyleSheet("font-size: 24px; font-weight: bold; color: #2c3e50;")
@@ -27,7 +27,7 @@ def main():
     app = QApplication(sys.argv)
     window = HelloWorldApp()
     window.show()
-    sys.exit(app.exec())
+    sys.exit(app.exec_())
 
 if __name__ == "__main__":
     main()
