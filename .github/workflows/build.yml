@@ -28,7 +28,7 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --console --onedir --name HelloWorld main.py
+        pyinstaller --console --onefile --name HelloWorld main.py
 
     - name: Create 7zip archive
       run: |
